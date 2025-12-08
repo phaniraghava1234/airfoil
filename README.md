@@ -11,7 +11,8 @@ This project demonstrates the implementation of fundamental mesh generation algo
 
 ## Mathematical Foundation
 The mesh generation pipeline follows the classical approach:
-1.  **Algebraic Initialization**: $ \vec{r}(\xi, \eta) = \text{TFI}(\partial \Omega) $
+
+1.  **Algebraic Initialization**: $\vec{r}(\xi, \eta) = \text{TFI}(\partial \Omega)$
 2.  **Elliptic Smoothing**: Solving $\nabla^2 \xi = 0$ and $\nabla^2 \eta = 0$ inverted to physical space to smooth the internal grid lines while freezing near-wall metrics.
 
 *See `MATH_AND_REFERENCES.md` for detailed equations and code mappings.*
