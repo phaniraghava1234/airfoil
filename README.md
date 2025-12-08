@@ -16,6 +16,16 @@ The mesh generation pipeline follows the classical approach:
 
 *See `MATH_AND_REFERENCES.md` for detailed equations and code mappings.*
 
+## Visual Results
+
+### 1. TFI vs. Elliptic Smoothing
+*Left: The initial algebraic mesh showing typical skewness. Right: The smoothed mesh (black) with the preserved boundary layer (green) showing improved orthogonality.*
+![Comparison Plot](comparison_plot.png)
+
+### 2. Boundary Layer Detail (Leading Edge)
+*Zoomed view of the leading edge, demonstrating how the "frozen layer" technique maintains high-quality orthogonal cells near the wall ($y^+$ preservation) even while smoothing the outer domain.*
+![Prism Showcase](prism_showcase.png)
+
 ## Usage
 Run the main script to generate a mesh for a NACA 4412 airfoil:
 ```bash
