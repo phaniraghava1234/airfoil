@@ -6,7 +6,10 @@ This document maps the mathematical theories used in this project to their speci
 **Source**: *Abbott, I. H., & Von Doenhoff, A. E. (1959). Theory of wing sections.*
 
 The thickness distribution $y_t$ is given by:
-$$ y_t = 5t \left( 0.2969\sqrt{x} - 0.1260x - 0.3516x^2 + 0.2843x^3 - 0.1015x^4 \right) $$
+
+```math
+y_t = 5t \left( 0.2969\sqrt{x} - 0.1260x - 0.3516x^2 + 0.2843x^3 - 0.1015x^4 \right)
+```
 
 **Code Implementation**: 
 - File: `initial_tfi_2.py`
@@ -18,7 +21,9 @@ $$ y_t = 5t \left( 0.2969\sqrt{x} - 0.1260x - 0.3516x^2 + 0.2843x^3 - 0.1015x^4 
 
 For a 2D domain with coordinates $(\xi, \eta)$ normalized to $[0,1]$, the linear TFI is defined as the Boolean sum of unidirectional interpolations. In this simplified C-mesh implementation, we interpolate primarily between the inner boundary (airfoil/wake) and outer boundary (farfield):
 
-$$ \vec{r}(\xi, \eta) = (1 - \eta)\vec{r}_{inner}(\xi) + \eta \vec{r}_{outer}(\xi) $$
+```math
+\vec{r}(\xi, \eta) = (1 - \eta)\vec{r}_{inner}(\xi) + \eta \vec{r}_{outer}(\xi)
+```
 
 **Code Implementation**:
 - File: `initial_tfi_2.py`
@@ -29,15 +34,28 @@ $$ \vec{r}(\xi, \eta) = (1 - \eta)\vec{r}_{inner}(\xi) + \eta \vec{r}_{outer}(\x
 **Source**: *Winslow, A. M. (1966). Journal of Computational Physics.*
 
 To optimize the mesh smoothness, we solve the Laplace equations for the curvilinear coordinates $(\xi, \eta)$ in physical space $(x, y)$:
-$$ \nabla^2 \xi = 0, \quad \nabla^2 \eta = 0 $$
+
+```math
+\nabla^2 \xi = 0, \quad \nabla^2 \eta = 0
+```
 
 Inverting this to solve for $x(\xi, \eta)$ and $y(\xi, \eta)$ yields the non-linear elliptic system:
-$$ \alpha \frac{\partial^2 \vec{r}}{\partial \xi^2} - 2\beta \frac{\partial^2 \vec{r}}{\partial \xi \partial \eta} + \gamma \frac{\partial^2 \vec{r}}{\partial \eta^2} = 0 $$
+
+```math
+\alpha \frac{\partial^2 \vec{r}}{\partial \xi^2} - 2\beta \frac{\partial^2 \vec{r}}{\partial \xi \partial \eta} + \gamma \frac{\partial^2 \vec{r}}{\partial \eta^2} = 0
+```
 
 Where the coefficients are metric terms:
-$$ \alpha = x_\eta^2 + y_\eta^2 $$
-$$ \gamma = x_\xi^2 + y_\xi^2 $$
-$$ \beta = x_\xi x_\eta + y_\xi y_\eta $$
+
+```math
+\alpha = x_\eta^2 + y_\eta^2
+```
+```math
+\gamma = x_\xi^2 + y_\xi^2
+```
+```math
+\beta = x_\xi x_\eta + y_\xi y_\eta
+```
 
 **Code Implementation**:
 - File: `tfi_finaly.py`
@@ -47,3 +65,4 @@ $$ \beta = x_\xi x_\eta + y_\xi y_\eta $$
   alpha = x_eta**2 + y_eta**2
   gamma = x_xi**2 + y_xi**2
   beta  = x_xi * x_eta + y_xi * y_eta
+  ```
