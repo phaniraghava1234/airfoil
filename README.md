@@ -1,7 +1,7 @@
 # Automatic Curvilinear Mesh Generation for Aircraft Design
 
 ## Project Overview
-This repository serves as a portfolio submission for the **Airbus Flight Physics Capability Team** (PhD position on Automatic Curvilinear Mesh Generation). It demonstrates the implementation of fundamental mesh generation algorithms required for high-fidelity CFD simulations, specifically targeting the generation of **C-Meshes for Airfoils** using hybrid Algebraic-Elliptic methods.
+This project demonstrates the implementation of fundamental mesh generation algorithms required for high-fidelity CFD simulations, specifically targeting the generation of **C-Meshes for Airfoils** using hybrid Algebraic-Elliptic methods.
 
 ## Capabilities
 1.  **Airfoil Geometry Generation**: Parametric generation of NACA 4-digit series airfoils (Abbott & Von Doenhoff).
@@ -25,7 +25,7 @@ This will:
 - Generate an initial TFI mesh.
 - Smooth the outer field using 100 iterations of the Winslow smoother.
 - Export the mesh to `final_mesh.csv`.
-- Display a comparison plot and a zoomed leading-edge view.
+- Display and save a comparison plot and a zoomed leading-edge view.
 
 ## Future Scope 
 1.  **Curved Elements**: Extension to $P^2$ or $P^3$ curvilinear elements to support High-Order DG methods.

@@ -89,6 +89,10 @@ def plot_comparison(X0, Y0, X1, Y1, freeze_layers):
     ax2.set_title("Elliptic Smoothed")
     ax2.set_xlim(-2, 3); ax2.set_ylim(-2, 2); ax2.set_aspect('equal')
 
+    # --- SAVE PLOT ---
+    plt.savefig('comparison_plot.png', dpi=300, bbox_inches='tight')
+    print("Saved comparison_plot.png")
+
 def plot_prism_showcase(X, Y, freeze_layers):
     """
     Detailed plot focused on the Airfoil with a zoomed INSET for the Leading Edge.
@@ -149,6 +153,9 @@ def plot_prism_showcase(X, Y, freeze_layers):
     axins.set_yticks([])
     
     mark_inset(ax, axins, loc1=2, loc2=4, fc="none", ec="0.5")
+    plt.savefig('prism_showcase.png', dpi=300, bbox_inches='tight')
+    print("Saved prism_showcase.png")
+
 
 if __name__ == "__main__":
     naca = "4412"

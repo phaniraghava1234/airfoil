@@ -3,8 +3,12 @@ Algebraic C-Mesh Generator (Transfinite Interpolation)
 Contains the save_xyz function and the base TFI logic.
 
 References:
-1. Abbott, I. H., & Von Doenhoff, A. E. (1959). Theory of wing sections. Dover Publications.
-2. Thompson, J. F., Warsi, Z. U., & Mastin, C. W. (1985). Numerical grid generation: foundations and applications.
+[1] Abbott, I. H., & Von Doenhoff, A. E. (1959). Theory of wing sections. Dover Publications.
+    - Used for NACA 4-digit series mathematical definition.
+[2] Thompson, J. F., Warsi, Z. U., & Mastin, C. W. (1985). Numerical grid generation: foundations and applications.
+    - Used for Transfinite Interpolation (TFI) logic.
+[3] Vinokur, M. (1983). On one-dimensional stretching functions for finite-difference calculations.
+    - Used for the hyperbolic tangent clustering.
 """
 
 import numpy as np
