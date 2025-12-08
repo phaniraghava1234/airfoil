@@ -1,4 +1,4 @@
-# Automatic Curvilinear Mesh Generation for Aircraft Design
+# Mesh Generation code
 
 ## Project Overview
 This project demonstrates the implementation of fundamental mesh generation algorithms required for high-fidelity CFD simulations, specifically targeting the generation of **C-Meshes for Airfoils** using hybrid Algebraic-Elliptic methods.
