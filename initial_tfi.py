@@ -1,6 +1,6 @@
 """
 Algebraic C-Mesh Generator (Transfinite Interpolation)
-Author: [Your Name]
+Author: Phani Raghava Panchagnula
 Description: Generates a structured C-Grid around a NACA 4-digit airfoil using TFI.
 """
 

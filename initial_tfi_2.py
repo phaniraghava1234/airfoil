@@ -1,7 +1,7 @@
 """
 Algebraic C-Mesh Generator (Transfinite Interpolation)
 Contains the save_xyz function and the base TFI logic.
-
+Author: Phani Raghava Panchagnula
 References:
 [1] Abbott, I. H., & Von Doenhoff, A. E. (1959). Theory of wing sections. Dover Publications.
     - Used for NACA 4-digit series mathematical definition.
